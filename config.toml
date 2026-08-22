@@ -1,7 +1,7 @@
-baseURL = "https://<yourname>.github.io/"
+baseURL = "https://Aknowd.github.io/"
 languageCode = "ja"
-title = "My Portfolio"
-theme = "PaperMod"
+title = "Self-Assembly Laboratory"
+theme = "blowfish"
 
 paginate = 10
 
@@ -33,3 +33,34 @@ url = "https://github.com/<yourname>"
 
 [params.assets]
 hero = "/images/Designer.png"
+
+[menu]
+  [[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+  [[menu.main]]
+  name = "Diary"
+  url = "/diary/"
+  weight = 2
+
+  [[menu.main]]
+  name = "Tools"
+  url = "/tools/"
+  weight = 3
+
+  [[menu.main]]
+  name = "Papers"
+  url = "/papers/"
+  weight = 4
+
+  [[menu.main]]
+  name = "Relax"
+  url = "/relax/"
+  weight = 5
+
+  [[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 6
