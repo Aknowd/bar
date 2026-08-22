@@ -1,6 +1,6 @@
 baseURL = "https://Aknowd.github.io/"
 languageCode = "ja"
-title = "Self-Assembly Laboratory"
+#title = "Self-Assembly Laboratory"
 theme = "blowfish"
 
 paginate = 10
@@ -31,8 +31,11 @@ url = "/dasq/"
 name = "GitHub"
 url = "https://github.com/<yourname>"
 
+
 [params.assets]
-hero = "/images/Designer.png"
+customCSS = ["css/custom.css"]
+hero = "/images/who.png"
+
 
 [menu]
   [[menu.main]]

@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "Diary"
 layout: "single"
 ---
 
@@ -7,7 +7,7 @@ layout: "single"
   <div class="menu-right">
     <ul>
       <li><a href="/home/">Home</a></li>
-      <li><a href="/diaries/">Diary</a></li>
+      <li><a href="/diary/" class="active">Diary</a></li>
       <li><a href="/tools/">Tools</a></li>
       <li><a href="/papers/">Papers</a></li>
       <li><a href="/relax/">Relax</a></li>

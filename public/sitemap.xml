@@ -3,18 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>http://localhost:1313/</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/relax/</loc>
   </url>
   <url>
     <loc>http://localhost:1313/diary/</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/diary/dream/</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/home/</loc>
   </url>
   <url>
     <loc>http://localhost:1313/diary/dream/actual/</loc>
-  </url>
-  <url>
-    <loc>http://localhost:1313/</loc>
   </url>
 </urlset>
