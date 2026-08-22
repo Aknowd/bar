@@ -1,0 +1,13 @@
+baseURL = "https://<yourname>.github.io/"
+languageCode = "ja"
+title = "My Portfolio"
+theme = "PaperMod"
+
+paginate = 10
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
