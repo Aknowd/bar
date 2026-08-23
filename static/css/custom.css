@@ -10,14 +10,14 @@
   background-size: 100%;
   background-position: center;
   background-attachment: fixed;
-  filter: brightness(100%);
-  filter: contrast(100%);
+  filter: brightness(80%);
+  filter: contrast(110%);
   opacity: 1;
   transition: opacity 5s ease;
   z-index: -1;
 }
 
-/* 右側メニュー */
+/* 右側ナビゲーション */
 .menu-right {
   position: fixed;
   top: 50%;
@@ -55,11 +55,10 @@
   width: 45%;
   height: 100%;
   padding: 30px;
-
   color: #ffffff;
   font-family: 'Orbitron', sans-serif;
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.784);
   overflow-y: scroll;
 
   /* スクロールバー左側 */
@@ -100,25 +99,95 @@
   pointer-events: none; /* 枠線をクリック不可にする */
 }
 
+
 /* 見出しスタイル */
 .home-content h1 {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: #00bfff;
 }
 
 .home-content h2 {
   font-size: 1.3rem;
   margin-top: 25px;
-  color: #ffffff;
-  border-left: 3px solid #00bfff;
   padding-left: 10px;
 }
+
+/* サブ見出し中央揃え */
+.home-content h2, .home-content h3 {
+  border-left: none;
+  text-align: center;
+  color: #ffffff;
+}
+
 
 /* 本文テキスト */
 .home-content p {
   line-height: 1.6;
   margin-bottom: 10px;
+}
+
+/* コンテンツボックス（本文を内包） */
+.content-box {
+  position: relative;
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  border: 3px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    linear-gradient(135deg, #ff66cc, #00bfff, #0033aa, #9933ff);
+}
+
+/* Read more ボタン */
+.read-more {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  color: #00bfff;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: #ff66cc;
+}
+
+/* サブボックス群（横並び） */
+.sub-boxes {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.sub-box {
+  position: relative;
+  flex: 1;
+  margin: 0 10px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  border: 3px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    linear-gradient(135deg, #ff66cc, #00bfff, #0033aa, #9933ff);
+}
+
+.sub-box h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.sub-box .read-more {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
 }
 
 /* フッター右下固定 */
