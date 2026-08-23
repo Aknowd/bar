@@ -10,6 +10,7 @@
   background-size: 100%;
   background-position: center;
   background-attachment: fixed;
+  background-repeat: no-repeat;
   filter: brightness(80%);
   filter: contrast(110%);
   opacity: 1;
@@ -20,7 +21,7 @@
 /* 右側ナビゲーション */
 .menu-right {
   position: fixed;
-  top: 50%;
+  top: 30%;
   right: 5%;
   transform: translateY(-50%);
   text-align: right;
@@ -33,13 +34,18 @@
 }
 
 .menu-right li {
-  margin: 12px 0;
+  margin: 20px 0;
 }
 
 .menu-right a {
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-decoration: none;
+}
+
+.menu-right a:hover {
+  color: #ff66cc;
+  transition: 0.3s;
 }
 
 .menu-right a, .content {
@@ -49,19 +55,14 @@
 
 /* 本文領域（左側半透明パネル） */
 .home-content {
-  position: fixed;
-  top: 0%;
-  left: 3%;
-  width: 45%;
-  height: 100%;
+  position: relative;
+  margin: 0% 0% 0% 0%;
+  width: 50%;
   padding: 30px;
   color: #ffffff;
   font-family: 'Orbitron', sans-serif;
-
   background-color: rgba(0, 0, 0, 0.784);
   overflow-y: scroll;
-
-  /* スクロールバー左側 */
   direction: rtl;
 }
 .home-content > * {
@@ -120,26 +121,14 @@
   display: block;
   margin: 40px auto 10px;
   padding: 10px 0;
-  width: 90%;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 12px;
-  border: 3px solid transparent;
-  background-clip: padding-box, border-box;
-  background-origin: padding-box, border-box;
-  background-image:
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    linear-gradient(135deg, #ff66cc, #00bfff, #0033aa, #9933ff);
 }
-
-
-
 /* 本文テキスト */
 .home-content p {
   line-height: 1.6;
   margin-bottom: 10px;
 }
 
-/* サブ見出し以下の要素用コンテナボックス（本文用） */
+/* コンテンツボックス*/
 .content-box {
   position: relative;
   margin: 20px auto;
@@ -153,7 +142,45 @@
   background-image:
     linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
     linear-gradient(135deg, #ff66cc, #00bfff, #0033aa, #9933ff);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 1;
 }
+
+.image-box {
+  position: relative;
+  width: 40%;
+  height: 160px;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,191,255,0.4);
+}
+
+.image-box:hover {
+  transform: scale(1.05);
+}
+
+/* リンクテキストを確実に表示 */
+.box-link {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-shadow: 0 0 8px #00bfff;
+  z-index: 2;
+}
+
 
 /* Read more ボタン */
 .read-more {
@@ -201,6 +228,130 @@
   bottom: 10px;
   right: 15px;
 }
+
+/* 左下の custom ボタン */
+#custom-button {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  padding: 5px 10px;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid #8a8a8aab;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  color: #a2a2a2;
+  cursor: pointer;
+  z-index: 9999;
+  transition: 0.3s;
+}
+
+#custom-button:hover {
+  background: rgba(0,0,0,0.8);
+  color: #ff66cc;
+}
+
+/* インジケータ選択メニュー */
+#indicator-menu {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 220px;
+  background: rgba(0,0,0,0.8);
+  border-radius: 10px;
+  border: 2px solid #00bfff;
+  padding: 10px;
+  z-index: 9999;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.indicator-option {
+  padding: 8px;
+  margin: 5px 0;
+  background: rgba(0,0,0,0.5);
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.indicator-option:hover {
+  background: rgba(0,0,0,0.7);
+  color: #ff66cc;
+}
+
+/* 1. 左側ネオン流動バー */
+#neon-flow-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 0%;
+  background: linear-gradient(180deg, #ff66cc, #00bfff, #0033aa, #9933ff);
+  z-index: 9998;
+}
+
+/* 2. 右側ネオンドット */
+#neon-dots {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background-image: radial-gradient(#00bfff 2px, transparent 2px);
+  background-size: 10px 20px;
+  opacity: 0.6;
+  z-index: 9998;
+}
+
+/* 3. 上部プログレスバー */
+#top-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(90deg, #ff66cc, #00bfff, #0033aa, #9933ff);
+  z-index: 9998;
+}
+
+/* 4. 左側ネオンリング */
+#neon-ring {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  border: 4px solid transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(135deg, #ff66cc, #00bfff, #0033aa, #9933ff);
+  -webkit-mask: radial-gradient(circle, transparent 60%, black 61%);
+  z-index: 9998;
+}
+
+/* 5. 背景ネオンライン */
+#neon-lines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(0,191,255,0.15) 0px,
+    rgba(0,191,255,0.15) 2px,
+    transparent 2px,
+    transparent 20px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+
 
 /* フッター右下固定 */
 .footer {

@@ -12,6 +12,7 @@ Latest updates and improvements will be listed here.
 
 <div class="content-box">
   <p>Log entries and timestamps will be summarized here.</p>
+  
   <a href="/updates/" class="read-more">Read more</a>
 </div>
 
@@ -19,18 +20,17 @@ Latest updates and improvements will be listed here.
 Dream and Actual diaries are available.
 
 <div class="content-box">
-  <div class="sub-boxes">
-    <div class="sub-box">
-      <h3>Dream</h3>
-      <a href="/diaries/dream/" class="read-more">Read more</a>
-    </div>
-    <div class="sub-box">
-      <h3>Actual</h3>
-      <a href="/diaries/actual/" class="read-more">Read more</a>
-    </div>
-  </div>
-</div>
 
+  <div class="image-box" data-static="/static/images/whoq1.png" data-animated="/static/images/whoq1.gif">
+    <a href="/diaries/dream/" class="box-link">Dream</a>
+  </div>
+
+  <div class="image-box" data-static="/images/whoq01.png" data-animated="/images/whoq01.gif">
+    <a href="/diaries/actual/" class="box-link">Actual</a>
+  </div>
+
+  <a href="/diaries/" class="read-more">Read more</a>
+</div>
 
 ## Tools
 Software and hardware are available.
