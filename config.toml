@@ -15,8 +15,6 @@ paginate = 10
 [params.homeInfo]
 title = "K's Portfolio"
 content = """
-電子ビーム技術・ナノマシン研究・高次元物理の理論構築を中心に活動しています。
-研究記録、技術メモ、創作プロジェクトを公開しています。
 """
 
 [[params.homeInfo.buttons]]
