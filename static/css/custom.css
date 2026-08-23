@@ -52,7 +52,6 @@
   text-shadow: 0 0 8px rgba(125, 96, 96, 0.6);
 }
 
-
 /* 本文領域（左側半透明パネル） */
 .home-content {
   position: relative;
@@ -62,8 +61,13 @@
   color: #ffffff;
   font-family: 'Orbitron', sans-serif;
   background-color: rgba(0, 0, 0, 0.784);
+
   overflow-y: scroll;
-  direction: rtl;
+  direction: rtl;       /* スクロールバーを左側へ移動 */
+}
+
+.home-content-inner {
+  direction: ltr;
 }
 .home-content > * {
   direction: ltr;
@@ -73,13 +77,13 @@
   width: 10px;
 }
 .home-content::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(133, 5, 93, 0.596);
 }
-
 .home-content::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, #e601a9, #1e2a44);
   border-radius: 4px;
 }
+
 
 /* 擬似要素で輪郭線グラデーションを描画 */
 .home-content::before {
@@ -100,14 +104,16 @@
 
 /* 見出しスタイル */
 .home-content h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 10px;
+  word-spacing: 2px;
 }
 
 .home-content h2 {
-  font-size: 1.3rem;
+  font-size: 2.0rem;
   margin-top: 25px;
   padding-left: 10px;
+  letter-spacing: 3px;
 }
 
 /* サブ見出し中央揃え */
@@ -122,26 +128,20 @@
   margin: 40px auto 10px;
   padding: 10px 0;
 }
-/* 本文テキスト */
-.home-content p {
-  line-height: 1.6;
-  margin-bottom: 10px;
-}
 
-/* コンテンツボックス*/
 .content-box {
   position: relative;
-  margin: 20px auto;
-  padding: 20px;
-  width: 90%;
-  background-color: rgba(0, 0, 0, 0.5);
+  margin: auto;
+  padding: 10px 0px 30px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 12px;
   border: 3px solid transparent;
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
   background-image:
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    linear-gradient(135deg, #ff66cc, #00bfff, #0033aa, #9933ff);
+    linear-gradient(rgba(16, 65, 115, 0.404), rgba(18, 92, 121, 0.565)),
+    linear-gradient(135deg, #ff66cc00, #00bfff00, #0033aa00, #9933ff00);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -150,22 +150,52 @@
   z-index: 1;
 }
 
+
+/* Diaries コンテナ（透明） */
+.container {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #95a31900;
+}
+
 .image-box {
   position: relative;
-  width: 40%;
-  height: 160px;
+  width: 50%;
+  height: 300px;
   margin: 10px;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
+  background-color: #000;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: transform 0.3s ease;
-  box-shadow: 0 0 10px rgba(0,191,255,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.image-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 3px;
+  background: linear-gradient(135deg, #ff66cc, #00bfff, #0033aa, #9933ff);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+
 .image-box:hover {
-  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,191,255,0.6);
+  cursor: pointer;
 }
 
 /* リンクテキストを確実に表示 */
@@ -185,10 +215,11 @@
 /* Read more ボタン */
 .read-more {
   position: absolute;
-  bottom: 10px;
+  bottom: -25px;
   right: 15px;
-  color: #00bfff;
-  font-size: 0.9rem;
+  background-color: #0033aa00;
+  color: #e4e4e4d8;
+  font-size: 1.0rem;
   text-decoration: none;
   transition: color 0.3s ease;
 }

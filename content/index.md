@@ -3,9 +3,9 @@ title: "Quantum Base -Bar"
 layout: "home"
 ---
 
-Welcome to our bar **“levitation”**.  
-Please get relax through freely exploring the site.  
-You will find anything you want to know.
+Welcome to our bar **“resonance”**.  
+Please get relax through freely exploring this site.  
+You will find anything you need.
 
 ## Update logs
 Latest updates and improvements will be listed here.
@@ -17,57 +17,68 @@ Latest updates and improvements will be listed here.
 </div>
 
 ## Diaries
-Dream and Actual diaries are available.
-
 <div class="content-box">
-
-  <div class="image-box" data-static="/static/images/whoq1.png" data-animated="/static/images/whoq1.gif">
-    <a href="/diaries/dream/" class="box-link">Dream</a>
+  <p>Dream and Actual events are noted.</p>
+  <div class="container">
+    <div class="image-box" data-static="/images/Dream01.png" data-animated="/images/whoq1.gif">
+      <a href="/diaries/dream/" class="box-link">Dream</a>
+    </div>
+    <div class="image-box" data-static="/images/Actual01.png" data-animated="/images/whoq01.gif">
+      <a href="/diaries/actual/" class="box-link">Actual</a>
+    </div>
+    <a href="/diaries/" class="read-more">Read more</a>
   </div>
-
-  <div class="image-box" data-static="/images/whoq01.png" data-animated="/images/whoq01.gif">
-    <a href="/diaries/actual/" class="box-link">Actual</a>
-  </div>
-
-  <a href="/diaries/" class="read-more">Read more</a>
 </div>
 
 ## Tools
-Software and hardware are available.
-
 <div class="content-box">
   <p>Software and Hardware experiments are documented.</p>
-  <div class="sub-boxes">
-    <div class="sub-box">
-      <h3>Software</h3>
-      <a href="/tools/software/" class="read-more">Read more</a>
+  <div class="container">
+    <div class="image-box" data-static="/images/whoq01.png" data-animated="/images/whoq01.gif">
+      <a href="/tools/software/" class="box-link">Software</a>
     </div>
-    <div class="sub-box">
-      <h3>Hardware</h3>
-      <a href="/tools/hardware/" class="read-more">Read more</a>
+    <div class="image-box" data-static="/images/whoq01.png" data-animated="/images/whoq01.gif">
+      <a href="/tools/hardwarel/" class="box-link">Hardware</a>
     </div>
+    <a href="/tools/" class="read-more">Read more</a>
   </div>
 </div>
+
 
 
 
 ## Reports
-Scientific and technical reports are available.
 <div class="content-box">
-  <div class="sub-boxes">
-    <div class="sub-box">
-      <h3>Scientific</h3>
-      <a href="/reports/scientific/" class="read-more">Read more</a>
+  <p>Scientific and technical reports are available.</p>
+  <div class="container">
+    <div class="image-box" data-static="/images/whoq01.png" data-animated="/images/whoq01.gif">
+      <a href="/tools/software/" class="box-link">Software</a>
     </div>
-    <div class="sub-box">
-      <h3>Technical</h3>
-      <a href="/reports/technical/" class="read-more">Read more</a>
+    <div class="image-box" data-static="/images/whoq01.png" data-animated="/images/whoq01.gif">
+      <a href="/tools/hardwarel/" class="box-link">Hardware</a>
     </div>
-  </div>_
+    <a href="/tools/" class="read-more">Read more</a>
+  </div>
 </div>
 
 ## Relax
-Audio-visual content are noted for relaxation.
+<div class="content-box">
+  <p>Audio-visual content are noted for relaxation.</p>
+  <div class="container">
+    <div class="image-box" data-static="/images/whoq2.png" data-animated="/images/whoq2.gif">
+      <a href="/relax/levitation/" class="box-link">Levitation</a>
+    </div>
+    <div class="image-box" data-static="/images/whoq3.png" data-animated="/images/whoq3.gif">
+      <a href="/relax/immersion/" class="box-link">Immersion</a>
+    </div>
+    <div class="image-box" data-static="/images/whoq4.png" data-animated="/images/whoq4.gif">
+      <a href="/relax/neutlization/" class="box-link">Neutlization</a>
+    </div>
+    <a href="/relax/" class="read-more">Read more</a>
+  </div>
+</div>
+
+
 <div class="content-box">
   <div class="sub-boxes">
     <div class="sub-box">
