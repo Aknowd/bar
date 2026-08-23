@@ -29,7 +29,6 @@ Dream and Actual diaries are available.
       <a href="/diaries/actual/" class="read-more">Read more</a>
     </div>
   </div>
-  <a href="/diaries/" class="read-more">Read more...</a>
 </div>
 
 
@@ -48,7 +47,6 @@ Software and hardware are available.
       <a href="/tools/hardware/" class="read-more">Read more</a>
     </div>
   </div>
-  <a href="/tools/" class="read-more">Read more</a>
 </div>
 
 
@@ -66,7 +64,6 @@ Scientific and technical reports are available.
       <a href="/reports/technical/" class="read-more">Read more</a>
     </div>
   </div>_
-  <a href="/reports/" class="read-more">Read more</a>
 </div>
 
 ## Relax
@@ -86,5 +83,4 @@ Audio-visual content are noted for relaxation.
       <a href="/relax/neutralization/" class="read-more">Read more</a>
     </div>
   </div>
-  <a href="/relax/" class="read-more">Read more</a>
 </div>
