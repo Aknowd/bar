@@ -1,13 +1,10 @@
 ---
 title: "Quantum Base -restroom"
-layout: "home"
+layout: "about"
 ---
 
-# Welcome
+# Administrator 
 
-Welcome to our bar **“levitation”**.  
-Please get relax through freely exploring the site.  
-You will find anything you want to know.
 
 ## Update logs
 <div class="content-box">
