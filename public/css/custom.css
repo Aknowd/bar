@@ -64,16 +64,13 @@
   /* スクロールバー左側 */
   direction: rtl;
 }
-
 .home-content > * {
   direction: ltr;
 }
-
 /* スクロールバー */
 .home-content::-webkit-scrollbar {
   width: 10px;
 }
-
 .home-content::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.1);
 }
@@ -118,6 +115,22 @@
   text-align: center;
   color: #ffffff;
 }
+/* h2 自体は「見出しコンテナ」として半透明＋枠グラデーション */
+.home-content h2 {
+  display: block;
+  margin: 40px auto 10px;
+  padding: 10px 0;
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  border: 3px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    linear-gradient(135deg, #ff66cc, #00bfff, #0033aa, #9933ff);
+}
+
 
 
 /* 本文テキスト */
@@ -126,7 +139,7 @@
   margin-bottom: 10px;
 }
 
-/* コンテンツボックス（本文を内包） */
+/* サブ見出し以下の要素用コンテナボックス（本文用） */
 .content-box {
   position: relative;
   margin: 20px auto;
@@ -152,7 +165,6 @@
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
 .read-more:hover {
   color: #ff66cc;
 }

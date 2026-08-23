@@ -1,29 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title></title>
-		<link>http://localhost:64922/</link>
-		<description>Recent content on </description>
+		<title>Quantum Base -Bar on </title>
+		<link>http://localhost:1313/</link>
+		<description>Recent content in Quantum Base -Bar on </description>
 		<generator>Hugo</generator>
 		<language>ja</language>
 		
 		
 		
 		
-			<atom:link href="http://localhost:64922/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title></title>
-				<link>http://localhost:64922/diary/</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:64922/diary/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Quantum Base -restroom</title>
-				<link>http://localhost:64922/about/</link>
-				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-				<guid>http://localhost:64922/about/</guid>
-				<description>&lt;h1 id=&#34;administrator&#34;&gt;Administrator&lt;/h1&gt;&#xA;&lt;h2 id=&#34;update-logs&#34;&gt;Update logs&lt;/h2&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;diaries&#34;&gt;Diaries&lt;/h2&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;tools&#34;&gt;Tools&lt;/h2&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;reports&#34;&gt;Reports&lt;/h2&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;relax&#34;&gt;Relax&lt;/h2&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;about&#34;&gt;About&lt;/h2&gt;&#xA;&lt;!-- raw HTML omitted --&gt;</description>
-			</item>
+			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
 	</channel>
 </rss>
