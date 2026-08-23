@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ .Title }}</title>
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+
+<body>
+
+  <!-- 背景画像 -->
+  <div class="bg"></div>
+
+  <!-- 右側メニュー -->
+  <nav class="menu-right">
+    <ul>
+      <li><a href="/home/">Home</a></li>
+      <li><a href="/diary/">Diary</a></li>
+      <li><a href="/tools/">Tools</a></li>
+      <li><a href="/papers/">Papers</a></li>
+      <li><a href="/relax/">Relax</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- 本文（左側） -->
+  <main class="content">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <!-- 右下フッター -->
+  <footer class="footer">
+    ©2026 — Hugo で構築されています
+  </footer>
+
+</body>
+</html>

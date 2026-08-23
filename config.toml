@@ -1,7 +1,7 @@
 baseURL = "https://Aknowd.github.io/"
 languageCode = "ja"
 #title = "Self-Assembly Laboratory"
-theme = "blowfish"
+theme = "labtheme"
 
 paginate = 10
 
