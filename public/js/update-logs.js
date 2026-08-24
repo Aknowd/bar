@@ -1,46 +1,30 @@
-document.addEventListener("DOMContentLoaded", () => {
+async function loadUpdatesJSON() {
+  const res = await fetch("/updates/index.json");
+  return await res.json();
+}
 
-  /* ------------------------------
-     1. 今日の日付と過去7日間を生成
-  ------------------------------ */
-  function formatDate(date) {
-    const mm = String(date.getMonth() + 1).padStart(2, "0");
-    const dd = String(date.getDate()).padStart(2, "0");
-    return mm + dd;
-  }
+document.addEventListener("DOMContentLoaded", async () => {
 
+  const updatesJSON = await loadUpdatesJSON();
+
+  // 今日の日付
   const today = new Date();
-  const dates = [];
 
+  // 最新8日間の横軸を生成
+  const dates = [];
   for (let i = 7; i >= 0; i--) {
     const d = new Date(today);
     d.setDate(today.getDate() - i);
     dates.push(formatDate(d));
   }
 
-  const todayIndex = dates.length - 1;
+  // JSONから該当する8日間のデータを抽出
+  const updates = updatesJSON.filter(u => dates.includes(u.date));
 
+  // index.md の総数を抽出
+  const indexCounts = updates.map(u => u.count);
 
-  /* ------------------------------
-     2. index.md の総数を日付ごとに取得
-        ※ ここは後で Hugo 生成 JSON と連携
-  ------------------------------ */
-  // 仮データ（後で自動取得に変更）
-  const indexCounts = [1, 2, 2, 3, 5, 5, 6, 7];
-
-
-  /* ------------------------------
-     3. 更新ログ（右サイネージ）
-        ※ ここも後で自動生成 JSON と連携
-  ------------------------------ */
-  const updates = [
-    { date: dates[7], title: "Scientific 02", link: "/reports/scientific02/" },
-    { date: dates[6], title: "Software 03", link: "/tools/software03/" },
-    { date: dates[5], title: "Immersion 01", link: "/relax/immersion01/" },
-    { date: dates[4], title: "Dream Page 05", link: "/diaries/dream05/" },
-    { date: dates[3], title: "Actual Page 04", link: "/diaries/actual04/" }
-  ];
-
+  
   function findUpdateIndexByDate(dateStr) {
     return updates.findIndex(u => u.date === dateStr);
   }
@@ -103,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     id: "todayLabelPlugin",
     afterDraw(chart) {
       const x = chart.scales.x.getPixelForValue(todayIndex);
-      const y = chart.chartArea.bottom - 20; // padding.bottom で確保済み
+      const y = chart.chartArea.bottom + 40; // padding.bottom で確保済み
 
       const ctx = chart.ctx;
       ctx.save();
@@ -126,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
     data: {
       labels: dates,
       datasets: [{
-        label: "indices",
+        label: "Total indexes",
         data: indexCounts,
         borderColor: "transparent",
         backgroundColor: "transparent",
@@ -154,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
         y: {
           title: {
             display: true,
-            text: "indices",
+            text: "Total indexes",
             color: "#ffffff",
             font: { size: 14, weight: "bold" }
           },
