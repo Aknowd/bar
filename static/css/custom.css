@@ -22,7 +22,7 @@
 .menu-right {
   position: fixed;
   top: 30%;
-  right: 5%;
+  right: 2%;
   transform: translateY(-50%);
   text-align: right;
 }
@@ -140,7 +140,7 @@
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
   background-image:
-    linear-gradient(rgba(16, 65, 115, 0.404), rgba(18, 92, 121, 0.565)),
+    linear-gradient(rgba(16, 65, 115, 0), rgba(18, 92, 121, 0)),
     linear-gradient(135deg, #ff66cc00, #00bfff00, #0033aa00, #9933ff00);
   display: flex;
   flex-wrap: wrap;
@@ -211,6 +211,92 @@
   z-index: 2;
 }
 
+/* Update logs コンテナ */
+.update-container {
+  position: relative;
+  margin: 20px auto;
+  padding: 25px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;     
+  border-radius: 12px;
+  border: 3px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-image:
+    linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1)),
+    linear-gradient(135deg, #ff66cc, #00bfff, #0033aa, #9933ff);
+}
+
+/* グラフ領域 */
+#updateGraph {
+  width: 80%;
+  height: 260px;
+  padding: 10px;
+  background-color: #8a2c2c00;
+  border-radius: 10px;
+  background-image:
+    linear-gradient(rgba(0,191,255,0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,191,255,0.15) 1px, transparent 1px);
+  background-size: 50px 50px; /* ネオングリッド */
+}
+
+
+/* サイバーパンク風サイネージ */
+.update-signage {
+  width: 35%;
+  height: 260px;
+  background: linear-gradient(135deg, rgba(10,10,10,0.9), rgba(30,0,40,0.9));
+  border-radius: 12px;
+  padding: 20px;
+  color: #ffffff;
+  font-family: "Consolas", "Roboto Mono", monospace;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 25px rgba(255,102,204,0.5), inset 0 0 20px rgba(0,191,255,0.3);
+}
+/* 走査線エフェクト */
+.update-signage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.05) 0px,
+    rgba(255,255,255,0.05) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  animation: scan 6s linear infinite;
+}
+
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+/* サイネージのフェード切替 */
+#signage-content {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+#signage-content.visible {
+  opacity: 1;
+}
+
+
+.update-signage a {
+  color: #00bfff;
+  text-decoration: none;
+}
+
+.update-signage a:hover {
+  color: #ff66cc;
+}
 
 /* Read more ボタン */
 .read-more {

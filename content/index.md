@@ -8,11 +8,21 @@ Please get relax through freely exploring this site.
 You will find anything you need.
 
 ## Update logs
-Latest updates and improvements will be listed here.
-
 <div class="content-box">
-  <p>Log entries and timestamps will be summarized here.</p>
-  
+
+  <div class="update-container">
+
+  <!-- グラフ領域 -->
+  <canvas id="updateGraph"></canvas>
+
+  <!-- サイネージ領域 -->
+  <div class="update-signage">
+    <div id="signage-content">
+      <p>更新日: 0901</p>
+      <p><a href="/reports/scientific02/">見出しを表示(リンク)</a></p>
+    </div>
+  </div>
+
   <a href="/updates/" class="read-more">Read more</a>
 </div>
 
