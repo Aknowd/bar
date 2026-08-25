@@ -155,12 +155,12 @@
 .container {
   position: relative;
   margin: auto;
-  padding: 0;
+  padding: 0px;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #95a31900;
+  background-color: #95a31942;
 }
 
 .image-box {
@@ -202,7 +202,7 @@
 .box-link {
   position: absolute;
   bottom: 10px;
-  left: 15px;
+  left: 20px;
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
@@ -214,13 +214,13 @@
 /* Update logs コンテナ */
 .update-container {
   position: relative;
-  margin: 20px auto;
-  padding: 25px;
-  width: 90%;
+  margin: auto;
+  padding: 10px;
+  width: 95%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;     
+  gap: 20px;
   border-radius: 12px;
   border: 3px solid transparent;
   background-clip: padding-box, border-box;
@@ -232,13 +232,13 @@
 
 /* グラフ領域 */
 #updateGraph {
-  width: 80%;
-  height: 260px;
-  padding: 10px;
+  width: 100%;
+  height: 320px;
+  padding: 5px;
   background-color: #8a2c2c00;
   border-radius: 10px;
   background-image:
-    linear-gradient(rgba(0,191,255,0.15) 1px, transparent 1px),
+    linear-gradient(rgba(15, 67, 85, 0.449) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0,191,255,0.15) 1px, transparent 1px);
   background-size: 50px 50px; /* ネオングリッド */
 }
@@ -246,11 +246,12 @@
 
 /* サイバーパンク風サイネージ */
 .update-signage {
-  width: 35%;
-  height: 260px;
+  width: 45%;
+  height: 240px;
   background: linear-gradient(135deg, rgba(10,10,10,0.9), rgba(30,0,40,0.9));
   border-radius: 12px;
   padding: 20px;
+  margin: 10px;
   color: #ffffff;
   font-family: "Consolas", "Roboto Mono", monospace;
   overflow: hidden;
@@ -301,16 +302,16 @@
 /* Read more ボタン */
 .read-more {
   position: absolute;
-  bottom: -25px;
+  bottom: -35px;
   right: 15px;
   background-color: #0033aa00;
-  color: #e4e4e4d8;
+  color: #949494d8;
   font-size: 1.0rem;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 .read-more:hover {
-  color: #ff66cc;
+  color: #d3d3d3;
 }
 
 /* サブボックス群（横並び） */

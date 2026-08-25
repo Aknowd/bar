@@ -9,26 +9,20 @@ You will find anything you need.
 
 ## Update logs
 <div class="content-box">
-
   <div class="update-container">
 
-  <!-- グラフ領域 -->
   <canvas id="updateGraph"></canvas>
-
-  <!-- サイネージ領域 -->
-  <div class="update-signage">
-    <div id="signage-content">
-      <p>更新日: 0901</p>
-      <p><a href="/reports/scientific02/">見出しを表示(リンク)</a></p>
+  <div class="update-signage">    
+  <div id="signage-content">
+        <p>更新日: 0901</p>
+        <p><a href="/reports/scientific02/">見出しを表示(リンク)</a></p>
+      </div>
     </div>
-  </div>
-
   <a href="/updates/" class="read-more">Read more</a>
 </div>
 
 ## Diaries
 <div class="content-box">
-  <p>Dream and Actual events are noted.</p>
   <div class="container">
     <div class="image-box" data-static="/images/Dream01.png" data-animated="/images/whoq1.gif">
       <a href="/diaries/dream/" class="box-link">Dream</a>
