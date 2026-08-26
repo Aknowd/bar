@@ -66,6 +66,7 @@ hero = "/images/who.png"
   url = "/about/"
   weight = 6
 
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -74,3 +75,8 @@ hero = "/images/who.png"
 [outputs]
 home = ["HTML", "JSON"]
 section = ["HTML", "JSON"]
+
+[outputFormats.JSON]
+mediaType = "application/json"
+baseName = "index"
+isPlainText = true
