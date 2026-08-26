@@ -14,10 +14,10 @@
   
   <nav class="menu-right">
     <ul>
-      <li><a href="/home/">Home</a></li>
-      <li><a href="/diary/">Diary</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/diary/">Diaries</a></li>
       <li><a href="/tools/">Tools</a></li>
-      <li><a href="/papers/">Papers</a></li>
+      <li><a href="/reports/">Reports</a></li>
       <li><a href="/relax/">Relax</a></li>
       <li><a href="/about/">About</a></li>
     </ul>
@@ -34,34 +34,105 @@
 
   <h1 id="administrator">Administrator</h1>
 <h2 id="update-logs">Update logs</h2>
-<!-- raw HTML omitted -->
+<div class="content-box">
+  <p>Latest updates and improvements will be listed here.</p>
+  <a href="/" class="read-more">Read more</a>
+</div>
 <h2 id="diaries">Diaries</h2>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<div class="content-box">
+  <p>Dream and Actual records are available for browsing.</p>
+  <a href="/diaries/" class="read-more">Read more</a>
+</div>
+<div class="sub-boxes">
+  <div class="sub-box">
+    <h3>Dream</h3>
+    <a href="/diaries/dream/" class="read-more">Read more</a>
+  </div>
+  <div class="sub-box">
+    <h3>Actual</h3>
+    <a href="/diaries/actual/" class="read-more">Read more</a>
+  </div>
+</div>
 <h2 id="tools">Tools</h2>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<div class="content-box">
+  <p>Software and Hardware experiments are documented.</p>
+  <a href="/tools/" class="read-more">Read more</a>
+</div>
+<div class="sub-boxes">
+  <div class="sub-box">
+    <h3>Software</h3>
+    <a href="/tools/software/" class="read-more">Read more</a>
+  </div>
+  <div class="sub-box">
+    <h3>Hardware</h3>
+    <a href="/tools/hardware/" class="read-more">Read more</a>
+  </div>
+</div>
 <h2 id="reports">Reports</h2>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<div class="content-box">
+  <p>Research articles and technical notes are introduced.</p>
+  <a href="/reports/" class="read-more">Read more</a>
+</div>
+<div class="sub-boxes">
+  <div class="sub-box">
+    <h3>Scientific</h3>
+    <a href="/reports/scientific/" class="read-more">Read more</a>
+  </div>
+  <div class="sub-box">
+    <h3>Technical</h3>
+    <a href="/reports/technical/" class="read-more">Read more</a>
+  </div>
+</div>
 <h2 id="relax">Relax</h2>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<div class="content-box">
+  <p>Enjoy music, visuals, and quotes for peaceful moments.</p>
+  <a href="/relax/" class="read-more">Read more</a>
+</div>
+<div class="sub-boxes">
+  <div class="sub-box">
+    <h3>Levitation</h3>
+    <a href="/relax/levitation/" class="read-more">Read more</a>
+  </div>
+  <div class="sub-box">
+    <h3>Immersion</h3>
+    <a href="/relax/immersion/" class="read-more">Read more</a>
+  </div>
+  <div class="sub-box">
+    <h3>Neutralization</h3>
+    <a href="/relax/neutralization/" class="read-more">Read more</a>
+  </div>
+</div>
 <h2 id="about">About</h2>
-<!-- raw HTML omitted -->
+<div class="content-box">
+  <p>Profile and links to other projects.</p>
+  <a href="/about/" class="read-more">Read more</a>
+</div>
 
   
 
 
   </main>
 
+  <div id="custom-button">custom</div>
+  <div id="indicator-menu" class="hidden">
+    <div class="indicator-option" data-id="1">1. Neon Flow Bar</div>
+    <div class="indicator-option" data-id="2">2. Neon Dots</div>
+    <div class="indicator-option" data-id="3">3. Top Progress Bar</div>
+    <div class="indicator-option" data-id="4">4. Neon Ring</div>
+    <div class="indicator-option" data-id="5">5. Background Neon Lines</div>
+  </div>
+
   
   <footer class="footer">
-    ©2026 — Hugo で構築されています
+    ©2026 AKNOWD
   </footer>
 
-</body>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/js/update-logs.js"></script>
+<script src="/js/animation-switch.js"></script>
+<script src="/js/indicator.js"></script>
 <script src="/js/timeswitch.js"></script>
 
+</body>
 </html>
