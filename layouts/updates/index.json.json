@@ -1,1 +1,14 @@
-{{ dict "status" "ok" | jsonify }}
+{{- $updates := slice -}}
+
+{{- range (where .Site.RegularPages "Section" "updates") -}}
+  {{- $item := dict
+      "date" (.Date.Format "0102")
+      "title" .Title
+      "link" .RelPermalink
+      "count" .Params.count
+      "signage" .Params.signage
+  -}}
+  {{- $updates = $updates | append $item -}}
+{{- end -}}
+
+{{- $updates | jsonify -}}

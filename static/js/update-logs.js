@@ -3,6 +3,24 @@ async function loadUpdatesJSON() {
   return await res.json();
 }
 
+async function main() {
+  const updates = await loadUpdatesJSON();
+
+  let idx = 0;
+  const signageElement = document.getElementById("signage");
+
+  function updateSignage() {
+    signageElement.textContent = updates[idx].signage;
+    idx = (idx + 1) % updates.length;
+  }
+
+  updateSignage();
+  setInterval(updateSignage, 10000); // 10秒ごとに切り替え
+}
+  console.log(updates);   // ← JSON がここで表示される
+  // ここでグラフ描画や DOM 更新を行う
+main();
+
 document.addEventListener("DOMContentLoaded", () => {
 
   /* ------------------------------
