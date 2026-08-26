@@ -111,7 +111,7 @@
 
 .home-content h2 {
   font-size: 2.0rem;
-  margin-top: 25px;
+  margin-top: 20px;
   padding-left: 10px;
   letter-spacing: 3px;
 }
@@ -125,8 +125,11 @@
 /* h2 自体は「見出しコンテナ」として半透明＋枠グラデーション */
 .home-content h2 {
   display: block;
-  margin: 40px auto 10px;
+  margin: 50px auto 10px;
   padding: 10px 0;
+}
+.home-content p {
+  margin: 20px;
 }
 
 .content-box {
@@ -246,7 +249,7 @@
 
 /* サイバーパンク風サイネージ */
 .update-signage {
-  width: 45%;
+  width: 50%;
   height: 240px;
   background: linear-gradient(135deg, rgba(10,10,10,0.9), rgba(30,0,40,0.9));
   border-radius: 12px;

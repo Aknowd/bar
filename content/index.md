@@ -1,14 +1,15 @@
 ---
-title: "Quantum Base -Bar"
+title: "Quantum Base -resonator room"
 layout: "home"
 ---
 
-Welcome to our bar **“resonance”**.  
+Welcome to my branched base **“the resonator room”**.  
 Please get relax through freely exploring this site.  
 You will find anything you need.
 
 ## Update logs
 <div class="content-box">
+  <p>Recently updated contents are displayed.</p> 
   <div class="update-container">
 
   <canvas id="updateGraph"></canvas>
@@ -21,8 +22,10 @@ You will find anything you need.
   <a href="/updates/" class="read-more">Read more</a>
 </div>
 
+
 ## Diaries
 <div class="content-box">
+  <p>Daily motifs of dream and actual aspects are collected.</p>
   <div class="container">
     <div class="image-box" data-static="/images/Dream01.png" data-animated="/images/whoq1.gif">
       <a href="/diaries/dream/" class="box-link">Dream</a>
@@ -34,9 +37,9 @@ You will find anything you need.
   </div>
 </div>
 
+
 ## Tools
 <div class="content-box">
-  <p>Software and Hardware experiments are documented.</p>
   <div class="container">
     <div class="image-box" data-static="/images/whoq01.png" data-animated="/images/whoq01.gif">
       <a href="/tools/software/" class="box-link">Software</a>
