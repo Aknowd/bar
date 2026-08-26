@@ -73,10 +73,12 @@ hero = "/images/who.png"
       unsafe = true
       
 [outputs]
-home = ["HTML", "JSON"]
+home = ["HTML"]
 section = ["HTML", "JSON"]
 
 [outputFormats.JSON]
 mediaType = "application/json"
 baseName = "index"
 isPlainText = true
+
+ignoreConfig = ["themes/labtheme/hugo.toml"]
