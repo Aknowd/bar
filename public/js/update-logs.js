@@ -1,30 +1,24 @@
+/* ============================================================
+   1. JSON を読み込む
+============================================================ */
 async function loadUpdatesJSON() {
   const res = await fetch("/updates/index.json");
   return await res.json();
 }
 
-async function main() {
-  const updates = await loadUpdatesJSON();
-
-  let idx = 0;
-  const signageElement = document.getElementById("signage");
-
-  function updateSignage() {
-    signageElement.textContent = updates[idx].signage;
-    idx = (idx + 1) % updates.length;
-  }
-
-  updateSignage();
-  setInterval(updateSignage, 10000); // 10秒ごとに切り替え
-}
-  console.log(updates);   // ← JSON がここで表示される
-  // ここでグラフ描画や DOM 更新を行う
-main();
-
-document.addEventListener("DOMContentLoaded", () => {
+/* ============================================================
+   2. メイン処理
+============================================================ */
+document.addEventListener("DOMContentLoaded", async () => {
 
   /* ------------------------------
-     1. 今日の日付と過去7日間を生成
+     JSON 読み込み
+  ------------------------------ */
+  const updates = await loadUpdatesJSON();
+  console.log("Loaded updates:", updates);
+
+  /* ------------------------------
+     今日の日付と過去7日間を生成
   ------------------------------ */
   function formatDate(date) {
     const mm = String(date.getMonth() + 1).padStart(2, "0");
@@ -43,34 +37,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const todayIndex = dates.length - 1;
 
+  /* ------------------------------
+     JSON の count を日付ごとに集計
+  ------------------------------ */
+  const indexCounts = dates.map(dateStr => {
+    const items = updates.filter(u => u.date === dateStr);
+    if (items.length === 0) return 0;
+    return items.reduce((sum, item) => sum + (item.count || 0), 0);
+  });
 
   /* ------------------------------
-     2. index.md の総数を日付ごとに取得
-        ※ ここは後で Hugo 生成 JSON と連携
+     日付 → 更新ログ検索
   ------------------------------ */
-  // 仮データ（後で自動取得に変更）
-  const indexCounts = [1, 2, 2, 3, 5, 5, 6, 7];
-
-
-  /* ------------------------------
-     3. 更新ログ（右サイネージ）
-        ※ ここも後で自動生成 JSON と連携
-  ------------------------------ */
-  const updates = [
-    { date: dates[7], title: "Scientific 02", link: "/reports/scientific02/" },
-    { date: dates[6], title: "Software 03", link: "/tools/software03/" },
-    { date: dates[5], title: "Immersion 01", link: "/relax/immersion01/" },
-    { date: dates[4], title: "Dream Page 05", link: "/diaries/dream05/" },
-    { date: dates[3], title: "Actual Page 04", link: "/diaries/actual04/" }
-  ];
-
   function findUpdateIndexByDate(dateStr) {
     return updates.findIndex(u => u.date === dateStr);
   }
 
-
   /* ------------------------------
-     4. 波動パルス折れ線プラグイン
+     波動パルス折れ線プラグイン
   ------------------------------ */
   const wavePulsePlugin = {
     id: "wavePulsePlugin",
@@ -96,9 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-
   /* ------------------------------
-     5. 今日の日付の縦線（ネオン破線）
+     今日の日付の縦線（ネオン破線）
   ------------------------------ */
   const verticalLinePlugin = {
     id: "verticalLinePlugin",
@@ -118,15 +101,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-
   /* ------------------------------
-     6. 今日の日付の下に (today) を表示
+     今日ラベル
   ------------------------------ */
   const todayLabelPlugin = {
     id: "todayLabelPlugin",
     afterDraw(chart) {
       const x = chart.scales.x.getPixelForValue(todayIndex);
-      const y = chart.chartArea.bottom + 40; // padding.bottom で確保済み
+      const y = chart.chartArea.bottom + 40;
 
       const ctx = chart.ctx;
       ctx.save();
@@ -138,9 +120,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-
   /* ------------------------------
-     7. Chart.js 初期化
+     Chart.js 初期化
   ------------------------------ */
   const ctxGraph = document.getElementById("updateGraph").getContext("2d");
 
@@ -163,11 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }]
     },
     options: {
-      layout: {
-        padding: {
-          bottom: 30 // today ラベル用余白
-        }
-      },
+      layout: { padding: { bottom: 30 } },
       plugins: { legend: { display: false } },
       scales: {
         x: {
@@ -198,9 +175,8 @@ document.addEventListener("DOMContentLoaded", () => {
     ]
   });
 
-
   /* ------------------------------
-     8. サイネージ（フェード切替）
+     サイネージ更新
   ------------------------------ */
   const signage = document.getElementById("signage-content");
   let currentIndex = todayIndex;
@@ -216,15 +192,14 @@ document.addEventListener("DOMContentLoaded", () => {
       signage.innerHTML = `
         <p>更新日: ${item.date}</p>
         <p><a href="${item.link}">${item.title}</a></p>
-        <p>最新から過去へ一定間隔で切替表示</p>
+        <p>${item.signage || "最新から過去へ一定間隔で切替表示"}</p>
       `;
       signage.classList.add("visible");
     }, 300);
   }
 
-
   /* ------------------------------
-     9. ホバーでサイネージ更新
+     ホバーでサイネージ更新
   ------------------------------ */
   document.getElementById("updateGraph").addEventListener("mousemove", (event) => {
     const points = chart.getElementsAtEventForMode(event, "nearest", { intersect: true }, false);
@@ -234,9 +209,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-
   /* ------------------------------
-     10. スクロールで日付移動 → 点強調＋サイネージ同期
+     スクロールで日付移動
   ------------------------------ */
   document.getElementById("updateGraph").addEventListener("wheel", (event) => {
     event.preventDefault();
@@ -256,7 +230,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     chart.update();
   });
-
 
   /* 初期表示（今日） */
   updateSignageByDate(dates[todayIndex]);
