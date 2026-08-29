@@ -14,11 +14,11 @@ You will find anything you need.
 
   <canvas id="updateGraph"></canvas>
   <div class="update-signage">    
-  <div id="signage-content">
-        <p>更新日: 0901</p>
-        <p><a href="/reports/scientific02/">見出しを表示(リンク)</a></p>
-      </div>
+    <div id="signage-content">
+          <p>更新日: 0901</p>
+          <p><a href="/reports/scientific02/">見出しを表示(リンク)</a></p>
     </div>
+  </div>
   <a href="/updates/" class="read-more">Read more</a>
 </div>
 
