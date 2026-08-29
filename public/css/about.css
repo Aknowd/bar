@@ -8,7 +8,7 @@
 .subheading {
   position: relative;
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 /* 白い長い下線 */
@@ -27,7 +27,7 @@
 /* 上段：プロフィール */
 .prof-box {
   display: flex;
-  width: 100%;
+  width: 90%;
   margin-bottom: 40px;
   padding: 10px;
   justify-content: space-between;
@@ -41,7 +41,7 @@
 }
 .prof-right {
   width: 80%;
-  background-color: #ff66cc;
+  background-color: #ff66cc00;
 }
 
 
@@ -100,13 +100,18 @@
 
 /* 下段：Other Link */
 .link-box {
-  margin-bottom: 40px;
+  width: 90%;
+  margin-bottom: 50px;
 }
 
 .link-icons {
   display: flex;
+  width: auto;
+  margin: 10px;
+  padding: 20px;
   justify-content: center;
   gap: 40px;
+  background-color: #00bfff00;
 }
 
 .link-icons img {
@@ -121,9 +126,11 @@
 
 /* 利用規約 */
 .policy-box {
-  background-color: rgba(10,10,10,0.7);
+  width: 90%;
   border-radius: 12px;
-  padding: 20px;
+  padding: 30px;
+  margin: 20px;
   line-height: 1.6;
   font-size: 14px;
+  background-color: rgba(10,10,10,0.7);
 }

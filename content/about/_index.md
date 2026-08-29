@@ -15,26 +15,25 @@ layout: "about"
         <div class="prof-right">
           <h2 class="subheading">Profile</h2>
           <p>
-            <br>
-            青森県生まれ。<br>
-            日本の大学院にて博士後期課程を修了した後, 某製造業の技術開発部に勤務. 業務としてGithubを使用する傍ら, Github Pagesの存在を知り, 現在に至る.<br>
-            専門分野はマイクロ・ナノマシン、バイオサイバネティックス、フレキシブルロボット. <br>
-            趣味は科学を題材とする創造的作品に触れること．読書，音楽制作，イラストを通じて、来るべき22世紀に向けたSFエンタメを模索中．
+            Birth: Japan<br> 
+            Live: Tokyo<br>
+            I Got Ph.D. license in 2026, and now work as an engineer at the R&D depertment for supplying advanced scientific instruments to worldwide organizations. <br>
+            My scientific and techinical intersts are in micro-nanomachine, bio-cybernetics, flexible robots. <br>
+            My holiday is spent to immerse SCi-Fi-related creative works, including books, sounds, illustrations, arts and movies．
           </p>
         </div>
       </div>
-      <!-- 中段：Contact -->
       <div class="contact-box">
         <h2 class="subheading">Contact</h2>
         <form class="contact-form">
           <label for="comment"></label>
-          <textarea id="comment" name="comment" rows="4" placeholder="メッセージを入力..."></textarea>
-          <button type="submit">送信</button>
+          <textarea id="comment" name="comment" rows="4" placeholder="You can type your comments here..."></textarea>
+          <button type="submit">Send</button>
         </form>
       </div>
       <!-- 下段：Other Link -->
       <div class="link-box">
-        <h2 class="subheading">Other Link</h2>
+        <h2 class="subheading">Other Links</h2>
         <div class="link-icons">
           <a href="https://www.youtube.com/" target="_blank"><img src="/images/Logos/youtube.png" alt="YouTube"></a>
           <a href="https://soundcloud.com/" target="_blank"><img src="/images/Logos/soundcloud.png" alt="SoundCloud"></a>
@@ -43,16 +42,39 @@ layout: "about"
           <a href="https://aknowd.jp/" target="_blank"><img src="/images/Logos/project.png" alt="Personal Site"></a>
         </div>
       </div>
-      <!-- 利用規約 -->
       <div class="policy-box">
-        <h3>Site Policy</h3>
-        <p>
-          本サイトに掲載されるすべてのコンテンツ（文章・画像・音声・映像等）は、著作権法および関連法令により保護されています。<br>
-          無断転載・複製・再配布を禁止します。<br>
-          当サイトの情報は研究・創作活動を目的として提供されており、商業利用を目的とした引用・転用はご遠慮ください。<br>
-          コメントやお問い合わせに含まれる個人情報は、返信および運営上の連絡以外には使用しません。<br>
-          本サイトの利用により生じたいかなる損害についても、運営者は一切の責任を負いません。
-        </p>
+        <h2>Site Policy</h2>
+          <li>
+            Regardless of GitHub Pages' terms, the copyright for all digital contents on this site (texts, images, audios, videos, etc.) belongs solely to the original author and is protected by copyright law and relevant regulations. Unauthorized reproduction, copying, or redistribution of this content is strictly prohibited.<br>
+          </li>
+          <li>
+            All gitHub repositories published as "Tools" on this site are open-source and available for free use.<br>
+          </li>
+          <li>
+            The information on this site is provided for research and creative purposes; please refrain from quoting or using it for commercial purposes.<br>
+          </li>
+          <li>
+            Personal information included in comments or inquiries will not be used for any purpose other than replying or operational communication.<br>
+          </li>
+          <li>
+            The site operator assumes no liability for any damages arising from the use of this site.<br>
+          </li>
+          <h3 class="subheading"></h3>
+          <li>
+            Github Pagesの仕様に依らず，本サイトに掲載されるあらゆるデジタルコンテンツ（文章・画像・音声・映像等）の著作権は、著作者本人にのみ帰属しており，著作権法および関連法令により保護されています．これらを著作者の許可なく転載・複製・再配布する行為を固く禁じます．<br>
+          </li>
+          <li>
+            本サイトにてToolsとして公開されるGithubレポジトリはオープンソースで利用でき，自由にご使用いただけます．<br>
+          </li>
+          <li>
+            当サイトの情報は研究・創作活動を目的として提供されており、商業利用を目的とした引用・転用はご遠慮ください。<br>
+          </li>
+          <li>
+            コメントやお問い合わせに含まれる個人情報は、返信および運営上の連絡以外には使用しません。<br>
+          </li>
+          <li>
+            本サイトの利用により生じたいかなる損害についても、運営者は一切の責任を負いません。
+          </li>
       </div>
     </div>
   </section>
