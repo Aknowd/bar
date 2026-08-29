@@ -31,7 +31,7 @@ url = "https://github.com/<yourname>"
 
 
 [params.assets]
-customCSS = ["css/custom.css"]
+customCSS = ["css/custom.css", "css/about.css"]
 hero = "/images/who.png"
 
 

@@ -1,0 +1,129 @@
+.about-container {
+  width: 100%;
+  margin: auto;
+  color: #fbfbfb;
+  font-family: "Consolas", "Roboto Mono", monospace;
+}
+
+.subheading {
+  position: relative;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* 白い長い下線 */
+.subheading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;          /* 見出しとの間隔調整 */
+  width: 100%;          /* 線の長さ（必要に応じて調整） */
+  height: 2px;           /* 線の太さ */
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+
+
+/* 上段：プロフィール */
+.prof-box {
+  display: flex;
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: #00bfff00;
+}
+
+.prof-left {
+  text-align: center;
+}
+.prof-right {
+  width: 80%;
+  background-color: #ff66cc;
+}
+
+
+.prof-name {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.prof-circle {
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+  border: 6px solid;
+  background-color: #06151a00;
+  border-color: rgb(111, 111, 111);
+  overflow: hidden;
+  margin: auto;
+}
+
+.prof-circle img {
+  width: 256px;
+  height: 256px;
+  object-fit: cover;
+}
+
+
+/* 中段：Contact */
+.contact-box {
+  width: 90%;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form textarea {
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  border: 1px solid #00bfff;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.contact-form button {
+  width: 120px;
+  padding: 8px;
+  background: linear-gradient(135deg, #ff66cc, #00bfff);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* 下段：Other Link */
+.link-box {
+  margin-bottom: 40px;
+}
+
+.link-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.link-icons img {
+  width: 128px;
+  height: 128px;
+  transition: transform 0.3s ease;
+}
+
+.link-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* 利用規約 */
+.policy-box {
+  background-color: rgba(10,10,10,0.7);
+  border-radius: 12px;
+  padding: 20px;
+  line-height: 1.6;
+  font-size: 14px;
+}

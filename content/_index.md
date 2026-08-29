@@ -59,14 +59,15 @@ You will find anything you need.
   <p>Scientific and technical reports are available.</p>
   <div class="container">
     <div class="image-box" data-static="/images/whoq01.png" data-animated="/images/whoq01.gif">
-      <a href="/tools/software/" class="box-link">Software</a>
+      <a href="/tools/software/" class="box-link">Scientific</a>
     </div>
     <div class="image-box" data-static="/images/whoq01.png" data-animated="/images/whoq01.gif">
-      <a href="/tools/hardwarel/" class="box-link">Hardware</a>
+      <a href="/tools/hardwarel/" class="box-link">Technical</a>
     </div>
     <a href="/tools/" class="read-more">Read more</a>
   </div>
 </div>
+
 
 ## Relax
 <div class="content-box">

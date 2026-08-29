@@ -107,6 +107,7 @@
   font-size: 3rem;
   margin-bottom: 10px;
   word-spacing: 2px;
+  text-align: center;
 }
 
 .home-content h2 {
@@ -137,7 +138,7 @@
   margin: auto;
   padding: 10px 0px 30px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(39, 2, 248, 0);
   border-radius: 12px;
   border: 3px solid transparent;
   background-clip: padding-box, border-box;
@@ -163,7 +164,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #95a31942;
+  background-color: #95a31900;
 }
 
 .image-box {
@@ -210,7 +211,7 @@
   font-weight: bold;
   text-decoration: none;
   font-size: 1.1rem;
-  text-shadow: 0 0 8px #00bfff;
+  text-shadow: 0 0 8px #00bfff00;
   z-index: 2;
 }
 
@@ -238,7 +239,7 @@
   width: 100%;
   height: 320px;
   padding: 5px;
-  background-color: #8a2c2cc5;
+  background-color: #8a2c2c00;
   border-radius: 10px;
   background-image:
     linear-gradient(rgba(15, 67, 85, 0.449) 1px, transparent 1px),
