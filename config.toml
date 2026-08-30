@@ -42,8 +42,8 @@ hero = "/images/who.png"
   weight = 1
 
   [[menu.main]]
-  name = "Diary"
-  url = "/diary/"
+  name = "Diaries"
+  url = "/diaries/"
   weight = 2
 
   [[menu.main]]
@@ -52,8 +52,8 @@ hero = "/images/who.png"
   weight = 3
 
   [[menu.main]]
-  name = "Papers"
-  url = "/papers/"
+  name = "Reports"
+  url = "/reports/"
   weight = 4
 
   [[menu.main]]

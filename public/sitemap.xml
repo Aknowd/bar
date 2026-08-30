@@ -37,6 +37,8 @@
   </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
+    <loc>http://localhost:1313/diaries/</loc>
+  </url><url>
     <loc>http://localhost:1313/diaries/actual/</loc>
   </url><url>
     <loc>http://localhost:1313/diaries/dream/</loc>
@@ -48,8 +50,6 @@
     <loc>http://localhost:1313/tools/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/diaries/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url>
