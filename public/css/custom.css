@@ -14,7 +14,8 @@
   filter: brightness(80%);
   filter: contrast(110%);
   opacity: 1;
-  transition: opacity 5s ease;
+  transition: opacity 5ms ease;
+  transition: background-image 1s ease-in-out;
   z-index: -1;
 }
 
@@ -117,13 +118,12 @@
   letter-spacing: 3px;
 }
 
-/* サブ見出し中央揃え */
 .home-content h2, .home-content h3 {
   border-left: none;
   text-align: center;
   color: #ffffff;
 }
-/* h2 自体は「見出しコンテナ」として半透明＋枠グラデーション */
+
 .home-content h2 {
   display: block;
   margin: 50px auto 10px;

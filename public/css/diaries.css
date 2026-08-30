@@ -1,8 +1,8 @@
 body {
   background-image: url("/images/bg_default.jpg");
+  background-size: 100%;
   background-size: cover;
   background-position: center;
-  transition: background-image 1s ease-in-out;
 }
 
 .diaries-container {
@@ -15,7 +15,7 @@ body {
 
 .diary-box {
   flex: 1;
-  padding: 20px;
+  padding: 10px;
   border-radius: 12px;
   background-color: rgba(0, 0, 0, 0.6);
   border: 2px solid transparent;
@@ -55,6 +55,7 @@ body {
   text-align: left;
   padding: 6px 0;
   cursor: pointer;
+  font-size: 16px;
   transition: color 0.3s ease;
 }
 .ep-btn:hover {
@@ -65,17 +66,87 @@ body {
   font-weight: bold;
 }
 
-/* 本文表示枠 */
 .diary-content-box {
   width: 90%;
   height: 500px;
   margin: 40px auto;
-  padding: 20px;
+  padding: 30px;                     /* 余白を増やす */
   border-radius: 12px;
-  background-color: rgba(0,0,0,0.7);
-  border: 2px solid #00bfff;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-image:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    linear-gradient(180deg, #ff66cc00, #00bfff40,#ff66cc00);
+  
   color: #ffffff;
-  line-height: 1.6;
+  line-height: 1.8;                  /* 行間を広げる */
+  font-size: 18px;                   /* 文字サイズを大きく */
   font-family: "Consolas", "Roboto Mono", monospace;
-  min-height: 200px;
+  min-height: 250px;
+  overflow: auto;                    /* はみ出し防止 */
 }
+
+/* pre タグのはみ出し防止 */
+.diary-content-box pre {
+  white-space: pre-wrap;             /* 改行を保持しつつ折り返し */
+  overflow-wrap: break-word;         /* 長い単語を折り返す */
+  font-size: 14px;                   /* 文字サイズ統一 */
+  line-height: 1.8;
+  margin: 0;
+}
+
+#diary-content {
+  display: block;
+  opacity: 1;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #888;
+  transition: 0.3s;
+  border-radius: 26px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #00bfff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.switch-label {
+  margin-left: 10px;
+  color: #fff;
+  font-size: 16px;
+}
+
+

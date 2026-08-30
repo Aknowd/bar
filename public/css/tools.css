@@ -1,0 +1,100 @@
+:root {
+  --fade-time: 0.5s;   /* 全体のフェード時間をここで調整 */
+}
+.fade {
+  opacity: 0;
+  transition: opacity var(--fade-time) ease-in-out;
+}
+.fade.show {
+  opacity: 1;
+}
+
+.tools-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px auto;
+  color: #fff;
+  background-color: rgba(0, 255, 255, 0);
+  font-family: "Roboto Mono", monospace;
+}
+
+.tools-top {
+  display: flex;
+  background-color: #ff00ff00;
+  margin: 10px;
+  padding: 10px;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.tools-left {
+  display: flex;
+  background-color: #00bfff00;
+  flex-direction: column;
+  width: 45%;
+  min-height: 400px;
+}
+
+.tools-right {
+  display: flex;
+  background-color: #00bfff00;
+  flex-direction: column;
+  width: 55%;
+  min-height: 300px;
+}
+
+.tools-bottom {
+  display: flex;
+  background-color: #ff00ff00;
+  margin: 30px 10px;
+  padding: 10px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.gradient-box {
+  height: 240px;
+  min-height: 200px;
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid;
+  border-image: linear-gradient(90deg, #00bfff, #ff00ff) 1;
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.gradient-box h3 {
+  color: #fcfcfca9;
+  margin-bottom: 10px;
+}
+
+.tool-art {
+  width: auto;
+  height: 600px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+  margin: 6px 0;
+  transition: color 0.3s;
+}
+
+li:hover {
+  color: #ff00ff;
+}
+
+li.active {
+  color: #00bfff;
+  font-weight: bold;
+}
+
+.instruction {
+  margin-top: 30px;
+}
+
