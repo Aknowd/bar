@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       fadeUpdate(imageArea, () => {
         imageArea.innerHTML = `
-          <img src="/images/tools/${selectedMain}-${selectedSub}.png"
+          <img src="/images/tools/${selectedMain}-${selectedSub}.jpg"
                style="width:100%;border-radius:8px;">
         `;
       });
