@@ -5,9 +5,9 @@
   <title></title>
   <link rel="stylesheet" href="/css/custom.css">
   <link rel="stylesheet" href="/css/diaries.css">
-  <link rel="stylesheet" href="/css/about.css">
   <link rel="stylesheet" href="/css/tools.css">
-  
+  <link rel="stylesheet" href="/css/reports.css">
+  <link rel="stylesheet" href="/css/about.css">
 </head>
 
 <body>
@@ -31,14 +31,53 @@
   <main class="content">
     
   <h1></h1>
-
+  <div class="home-content">
+    <div class="reports-container">
+        <!-- 上段：Topics -->
+        <div class="topics-section">
+            <div class="topics-left">
+                <h3>Topics</h3>
+                <div class="topics-list" id="topics-list">
+                <button data-topic="science">Science</button>
+                <button data-topic="technology">Technology</button>
+                <button data-topic="art">Art</button>
+                <button data-topic="creatives">Creatives</button>
+                <button data-topic="fiction">Fiction</button>
+                <button data-topic="ai">AI</button>
+                <button data-topic="gadgets">Gadgets</button>
+                <button data-topic="others">Others</button>
+                </div>
+            </div>
+            <div class="titles-right gradient-box">
+                <ul id="titles-list">
+                <!-- 動的に記事タイトルが挿入される -->
+                </ul>
+            </div>        
+        </div>
+        <!-- 下段：本文セクション -->
+        <div class="body-section">
+            <div class="materials">
+                <h3>Materials</h3>
+                <div class="gradient-box">
+                    <div id="materials-content"></div>
+                </div>
+            </div>
+            <div class="reports">
+                <h3>Reports</h3>
+                <div class="gradient-box">
+                    <div id="reports-content"></div>
+                </div>
+            </div> 
+            <div class="references">
+                <h3>References</h3>
+                <div class="gradient-box">
+                <ul id="references-list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
   
-  
-  <time datetime="0001-01-01T00:00:00&#43;00:00">1年1月1日</time>
-
-  
-  
-
 
   </main>
 
@@ -64,6 +103,7 @@
   <script src="/js/timeswitch.js"></script>
   <script src="/js/diaries.js"></script>
   <script src="/js/tools.js"></script>
+  <script src="/js/reports.js"></script>
 
 </body>
 </html>

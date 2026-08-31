@@ -134,3 +134,7 @@
   font-size: 14px;
   background-color: rgba(10,10,10,0.7);
 }
+
+.policy-box:hover {
+  cursor: default;
+}

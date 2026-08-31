@@ -62,7 +62,6 @@
   color: #ffffff;
   font-family: 'Orbitron', sans-serif;
   background-color: rgba(0, 0, 0, 0.784);
-
   overflow-y: scroll;
   direction: rtl;       /* スクロールバーを左側へ移動 */
 }

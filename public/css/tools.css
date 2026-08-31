@@ -13,6 +13,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: auto;
   margin: 20px auto;
   color: #fff;
   background-color: rgba(0, 255, 255, 0);
@@ -54,13 +55,12 @@
 }
 
 .gradient-box {
-  height: 240px;
-  min-height: 200px;
+  height: 200px;
   margin: 10px;
   padding: 20px;
   border: 2px solid;
-  border-image: linear-gradient(90deg, #00bfff, #ff00ff) 1;
-  border-radius: 10px;
+  border-radius: 50%;
+  border-image: linear-gradient(90deg, #00bfff, #ff00ff) 1;  
   background-color: rgba(0,0,0,0.6);
 }
 
@@ -71,7 +71,7 @@
 
 .tool-art {
   width: auto;
-  height: 600px;
+  height: 520px;
 }
 
 ul {
@@ -95,6 +95,42 @@ li.active {
 }
 
 .instruction {
+  min-height: 250px;    
+  height: auto; 
   margin-top: 30px;
+  padding: 20px;
+  border: 2px solid;
+  border-image: linear-gradient(90deg, #00bfff, #ff00ff) 1;
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.6);
+  color: #ffffff;
+  font-family: "Roboto Mono", monospace;
+  line-height: 1.8;        
+  overflow: visible;     
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
 }
 
+.instruction .gradient-box {
+  height: auto;
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid;
+  border-image: linear-gradient(90deg, #00bfff, #ff00ff) 1;
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.6);
+}
+.instruction h3 {
+  color: #00bfff;
+  margin-bottom: 10px;
+}
+
+
+#instruction-text {
+  font-size: 16px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}

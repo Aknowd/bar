@@ -1,7 +1,3 @@
----
-layout: "about"
----
-
 <div class="home-content">
   <section class="about-container">
     <div class="content-box">

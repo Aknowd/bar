@@ -1,0 +1,125 @@
+.reports-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin: 40px auto;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+}
+
+/* グラデーション枠 */
+.gradient-box {
+  border: 2px solid;
+  border-image: linear-gradient(90deg, #00bfff, #ff00ff) 1;
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.6);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.topics-section {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: rgba(50, 95, 86, 0.356);
+}
+
+/* 左側 Topics */
+.topics-left {
+  display: flex;
+  width: 45%;
+  margin: 10px;
+  flex-direction: column;
+}
+
+.topics-list {
+  display: flex;
+  flex-wrap: wrap; /* 横並びで敷き詰める */
+  gap: 10px;
+  max-height: 200px;
+  overflow-y: auto; /* はみ出した場合のみ縦スクロール */
+  padding: 10px 0;
+}
+
+.topics-list button {
+  background: transparent;
+  border: 1px solid #00bfff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.topics-list button:hover,
+.topics-list button.active {
+  background: linear-gradient(90deg, #00bfff, #ff00ff);
+}
+
+/* 右側 Titles */
+.titles-right {
+  width: 80%;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.titles-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.titles-right li {
+  cursor: pointer;
+  margin: 6px 0;
+  transition: color 0.3s;
+}
+
+.titles-right li:hover,
+.titles-right li.active {
+  color: #00bfff;
+}
+
+/* 本文セクション */
+/* --- Reports ページ本文セクション --- */
+.body-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "materials reports"
+    "references reports";
+  gap: 20px;
+}
+
+/* Materials */
+.materials {
+  grid-area: materials;
+  min-height: 250px; /* 高さを少し確保 */
+}
+
+/* References */
+.references {
+  grid-area: references;
+  min-height: 250px; /* Materials と同じ高さ */
+}
+
+/* Reports */
+.reports {
+  grid-area: reports;
+  min-height: 520px; /* ← References と並ぶ高さまで延長 */
+  height: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+/* タイトルとボックスの間隔を統一 */
+.materials h3,
+.references h3,
+.reports h3 {
+  margin-bottom: 10px; /* タイトル下の余白を統一 */
+}
