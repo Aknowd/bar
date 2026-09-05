@@ -1,0 +1,81 @@
+.relax-container {
+  position: relative;
+  width: 95%;
+  height: 103vh;
+  overflow: hidden;
+}
+
+/* 背景画像を最奥に配置し、画面全体に表示 */
+.background {
+  position: fixed;          /* スクロールしても固定 */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;   /* 画面全体にフィット */
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;              /* 最奥に配置 */
+  opacity: 1;
+  transition: opacity 1.0s ease-in-out;
+}
+
+.relax-window {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 360px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: 1px solid #a0f;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.hidden {
+  display: none;
+}
+
+.relax-menu {
+  position: absolute;
+  margin: auto;
+  bottom: 0px;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #a0f;
+}
+
+.menu-item {
+  color: #fff;
+  background: none;
+  border: none;
+  padding: 12px 16px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.menu-item:hover {
+  color: #a0f;
+}
+/* アクティブ状態 */
+.menu-item.active {
+  color: #f696f6;           /* アクティブ時の色（明るいピンク） */
+}
+
+.music-icon {
+  position: absolute;
+  bottom: 0px;
+  right: 90px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid #a0f;
+  border-radius: 50%;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+}

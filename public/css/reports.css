@@ -25,7 +25,7 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 20px;
-  background-color: rgba(50, 95, 86, 0.356);
+  background-color: rgba(50, 95, 86, 0);
 }
 
 /* 左側 Topics */
@@ -47,7 +47,7 @@
 
 .topics-list button {
   background: transparent;
-  border: 1px solid #00bfff;
+  border: 1px solid #0065b8;
   color: #fff;
   padding: 8px 16px;
   border-radius: 8px;
@@ -58,7 +58,7 @@
 
 .topics-list button:hover,
 .topics-list button.active {
-  background: linear-gradient(90deg, #00bfff, #ff00ff);
+  background:#0205a7
 }
 
 /* 右側 Titles */
@@ -88,29 +88,45 @@
 /* --- Reports ページ本文セクション --- */
 .body-section {
   display: grid;
+  margin-top: 50px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "materials reports"
     "references reports";
-  gap: 20px;
 }
 
-/* Materials */
 .materials {
   grid-area: materials;
   min-height: 250px; /* 高さを少し確保 */
+  background-color: #0065b800;
+  margin-bottom: 30PX;
+}
+.materials-box{
+  min-height: 500px;
+  height: auto;
+  margin-bottom: 20px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;  
 }
 
-/* References */
 .references {
   grid-area: references;
   min-height: 250px; /* Materials と同じ高さ */
 }
+.references-box{
+  min-height: 200px;
+  height: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
 
-/* Reports */
 .reports {
   grid-area: reports;
-  min-height: 520px; /* ← References と並ぶ高さまで延長 */
+}
+.reports-box {
+  min-height: 820px;
   height: auto;
   overflow-wrap: break-word;
   word-break: break-word;
@@ -121,5 +137,26 @@
 .materials h3,
 .references h3,
 .reports h3 {
-  margin-bottom: 10px; /* タイトル下の余白を統一 */
+  margin-top: 0;
+  margin-bottom: 10px;
 }
+
+/* References 内のリンクの視認性改善 */
+.references a {
+  color: #66ccff;          /* 明るい青色 */
+  font-size: 16px;         /* 読みやすいサイズ */
+  text-decoration: none;
+}
+
+.references a:hover {
+  color: #99e0ff;          /* ホバー時さらに明るく */
+  text-decoration: underline;
+}
+
+/* 連番のスタイル */
+.references li {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #ffffff;
+}
+

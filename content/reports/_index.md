@@ -25,20 +25,20 @@
         <div class="body-section">
             <div class="materials">
                 <h3>Materials</h3>
-                <div class="gradient-box">
+                <div class="gradient-box materials-box">
                     <div id="materials-content"></div>
                 </div>
             </div>
             <div class="reports">
                 <h3>Reports</h3>
-                <div class="gradient-box">
+                <div class="gradient-box reports-box">
                     <div id="reports-content"></div>
                 </div>
-            </div> 
+            </div>
             <div class="references">
                 <h3>References</h3>
-                <div class="gradient-box">
-                <ul id="references-list"></ul>
+                <div class="gradient-box references-box">
+                    <ul id="references-list"></ul>
                 </div>
             </div>
         </div>
